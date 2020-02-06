@@ -1,9 +1,11 @@
 # ProviderMicroFramework
 MicroFrameWorkProvider
 
-##Data Provider
+## Data Provider
 
-###USAGE
+### USAGE
+DAO Repository Provider
+
 ```java
 public class ElasticDataProviderDAO<T> extends DataProviderDAOImpl<T> {
 
@@ -33,11 +35,23 @@ public class ElasticDataProviderDAO<T> extends DataProviderDAOImpl<T> {
     }
 }
 ```
+
+Repository Switch Provider
+
+```java
+@Repository
+public class ExampleRepositoryImpl extends ElasticDataProviderDAO<PojoExample> implements ExampleRepository {
+
+}
+```
+
+
+
 ## Experimental
 Testing Usage
 
 
-##Authors
+## Authors
 Wauricio : maussj4@hotmail.com
 
 
